@@ -1,0 +1,9 @@
+<h1 class='listTitle'>This List of Mine</h1>
+<div class='listContainer'>
+  <ul class='dynamicList'>
+        <li *ngFor='let item of items' [attr.id]='item.id' [attr.class]='item.classes' (click)='handleClick(item.id)'>
+          <span class='listText'>{{ item.id }}</span>
+          <span class='delete' (click)='deleteListItem(item.id)'> x </span>
+        </li>
+  </ul>
+</div>
